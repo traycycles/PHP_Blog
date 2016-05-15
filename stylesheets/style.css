@@ -1,0 +1,46 @@
+h1 {
+    font-family: showcard Gothic;
+    font-size: 50pt;
+color: darkblue;
+    text-align: center;
+}
+
+body{
+    background-image: url("../img/BGI.png");
+    background-size: cover;
+}
+textarea{
+    height: 200px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formBox{
+    padding-top: 40px;
+}
+
+li {
+    font-family: "showcard Gothic";
+    font-size:25px ;
+    display: inline-block;
+    padding-left: 25px;
+    transition: all 1s ease-in-out;
+}
+
+li:hover{
+    text-decoration: none;
+    font-size: 35px;
+    height: 40px;
+    color: #898E96;
+
+
+}
+nav{
+    text-align: center;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}

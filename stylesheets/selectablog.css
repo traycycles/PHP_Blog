@@ -1,0 +1,36 @@
+h1 {
+    font-family: showcard Gothic;
+    font-size: 50pt;
+    color: darkblue;
+    text-align: center;
+}
+
+body{
+    background-image: url("../BGI.png");
+    background-size: cover;
+}
+
+li {
+    font-family: "showcard Gothic";
+    font-size:25px ;
+    display: inline-block;
+    padding-left: 25px;
+}
+li:hover{
+    text-decoration: none;
+    font-size: 35px;
+    transition: all 1s ease;
+    color: #898E96;
+
+}
+nav{
+    text-align: center;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+td{
+    height: 400px;
+    width: 400px;
+}
