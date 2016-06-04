@@ -7,7 +7,7 @@ $entries=blog($tablename);
 
 function blog($tablename){
 
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     } else {

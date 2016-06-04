@@ -2,7 +2,7 @@
 $tablename = 'blog';
 function fieldnamearray($table)
 {
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
 
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
@@ -44,7 +44,7 @@ function enter_data($fieldnamearray, $tablename)
         }
     }
 
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     } else {
@@ -81,7 +81,7 @@ function enter_data($fieldnamearray, $tablename)
 
 
 function get_data($fieldnames, $tablename){
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     }
@@ -108,7 +108,7 @@ function get_data($fieldnames, $tablename){
 }
 
 function delete_data($blogid, $tablename){
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
 
     if(!$db ){
         die("Connection failed: ". mysqli_connect_error());
@@ -131,7 +131,7 @@ function delete_data($blogid, $tablename){
 
 function blog($tablename){
 
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     } else {
@@ -153,7 +153,7 @@ function blog($tablename){
 
 
 function home_page($tablename){
-    $db = mysqli_connect("127.0.0.1", "root", "1234", "ohellno");
+    $db = mysqli_connect("127.0.0.1", "root", "root", "ohellno");
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     } else {
