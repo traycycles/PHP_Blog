@@ -25,7 +25,7 @@
                 //AJAX part
                 console.log(data);
                 $.post(url,data,function(response) {
-                    var thanks = '<p>Thanks for signing up!</p>';
+                    var thanks = '<p>Thanks for entry!</p>';
                     $('#thanks').html(thanks);
                     //woops
                 }).fail(function (jqXHR){
