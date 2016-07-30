@@ -3,12 +3,45 @@
     <meta charset="UTF-8">
     <title>Fun Project--ACA</title>
     <link href="stylesheets/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--    <script>-->
+<!--        function gotit(){-->
+<!--            window.alert('Thanks for the entry!');-->
+<!--        }-->
+<!--    </script>-->
     <script>
-        function gotit(){
-            window.alert('Thanks for the entry!');
-        }
-    </script>
+        $(document).ready(function() {
+            $('form').submit(function(evt) {
+                evt.preventDefault();
+                var url = $(this).attr("action");
+                var data = $(this).serialize();
+                var $submitButton = $('#submit');
 
+
+                //kill input while ajax
+                $submitButton.attr('disabled', true).val('submitting...');
+
+
+                //AJAX part
+                console.log(data);
+                $.post(url,data,function(response) {
+                    var thanks = '<p>Thanks for signing up!</p>';
+                    $('#thanks').html(thanks);
+                    //woops
+                }).fail(function (jqXHR){
+                    var errorMessage = '<p>Sorry, there\'s been an error.';
+                    errorMessage += 'Please try again later. </p>';
+                    $('#thanks').html(errorMessage);
+                });
+
+                $submitButton.attr('disabled', false).val('Submit!');
+                $('input[type=text]').each(function(){
+                    $(this).val('');
+                });
+                $('#content').val('');
+            }); //end submit
+        }); // end ready
+    </script>
 </head>
 <body>
 <header>
@@ -34,9 +67,10 @@
     </div>
     <div class="formBox">
         <strong>Content:</strong><br>
-        <textarea name="content" style="width:80%"></textarea>
+        <textarea name="content" id="content" style="width:80%"></textarea>
     </div>
-    <p><input type="submit" value="Submit"onclick="gotit();">&nbsp;&nbsp;</p>
+    <input type="submit" value="Submit!" id="submit">
+    <p id="thanks"></p>
 </form>
 
 </body>
